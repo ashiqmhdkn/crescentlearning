@@ -19,11 +19,11 @@ export default function Page() {
     name: "Crescent Learning | Quality Education & Coaching",
     description:
       "Crescent Learning - 38+ years of excellence in education. NMMS coaching, online courses, hybrid tuition, and student development programs.",
-    url: "https://crescentlearning.com/",
+    url: "https://crescentlearning.org/",
     mainEntity: {
       "@type": "Organization",
       name: "Crescent Learning",
-      url: "https://crescentlearning.com",
+      url: "https://crescentlearning.org/",
       description: "Educational institution providing quality coaching and academic support",
       foundingDate: "1987",
       address: {
@@ -41,9 +41,9 @@ export default function Page() {
         email: "info@crescentlearning.com",
       },
       sameAs: [
-        "https://facebook.com/crescentlearning",
-        "https://twitter.com/crescentlearning",
-        "https://instagram.com/crescentlearning",
+        "https://maps.app.goo.gl/vr3zG6P8gdggNiX18",
+        "https://www.youtube.com/@crescentcentreinfo",
+        "https://www.instagram.com/crescent_centre/",
       ],
     },
     breadcrumb: {
@@ -53,7 +53,7 @@ export default function Page() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://crescentlearning.com",
+          item: "https://crescentlearning.org",
         },
       ],
     },

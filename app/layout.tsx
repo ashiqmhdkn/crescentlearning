@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     "Crescent Learning - 38+ years of excellence in education. NMMS coaching, online courses, hybrid tuition, and student development programs. Join our Primary, Secondary, Senior Secondary, and Competitive Coaching divisions.",
   keywords: [
+    "Kadungathukundu",
+    "Kalpakanchery",
+    "Valavannur",
     "Crescent Learning",
     "Crescent Academy",
     "quality education",
@@ -39,13 +42,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://crescentlearning.com",
+    url: "https://crescentlearning.org",
     siteName: "Crescent Learning",
     title: "Crescent Learning | Quality Education & Coaching",
     description: "38+ years of excellence in education with comprehensive coaching programs",
     images: [
       {
-        url: "https://crescentlearning.org/og-image.jpg",
+        url: "https://crescentlearning.org/crescent.png",
         width: 1200,
         height: 630,
         alt: "Crescent Learning - Quality Education",
@@ -59,7 +62,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://crescentlearning.com",
+    canonical: "https://crescentlearning.org",
   },
 }
 
@@ -90,11 +93,11 @@ export default function RootLayout({
         />
 
         {/* Dynamic Favicon Script */}
-        <Script id="dynamic-favicon" strategy="beforeInteractive">
+        {/* <Script id="dynamic-favicon" strategy="beforeInteractive">
           {`
             function updateFavicon() {
               const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const faviconHref = darkMode ? '/icons/crescent.png' : '/icons/favicon-dark.svg';
+              const faviconHref = ;
               let link = document.querySelector("link[rel~='icon']");
               if (!link) {
                 link = document.createElement('link');
@@ -106,7 +109,23 @@ export default function RootLayout({
             updateFavicon();
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
           `}
-        </Script>
+        </Script> */}
+        <Script id="dynamic-favicon" strategy="beforeInteractive">
+  {`
+    function updateFavicon() {
+      const faviconHref = '/crescent.png'; // ✅ relative path from public folder
+      let link = document.querySelector("link[rel~='icon']");
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      link.href = faviconHref;
+    }
+    updateFavicon();
+  `}
+</Script>
+
 
         {/* Google Tag Manager (deferred)*/}
         {/* <Script id="gtm-script" strategy="lazyOnload">
@@ -164,8 +183,8 @@ export default function RootLayout({
         </Suspense>
 
         {/* Vercel Speed Insights and Analytics components */}
-        {/* <SpeedInsights />
-        <Analytics /> */}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

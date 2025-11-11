@@ -1,49 +1,68 @@
 "use client"
 
 import { useRef } from "react"
-import TestimonialCard from "./testimonial-card"
+import TestimonialCard from "./staff-card"
 import { Button } from "@/components/ui/button"
+import { title } from "process"
+import StaffCard from "./staff-card"
 
-const testimonials = [
+const staff = [
   {
     id: 1,
-    quote: "Your product is awesome for X, Y, Z reasons. Would highly recommend!",
-    subtitle: "Unparalleled in speed and reliability",
-    name: "John Smith",
+    name: "Sanu",
     title: "Co-Founder & CTO",
-    company: "Microsoft",
-    avatar: "/professional-bearded-man.png",
-    logo: "/health-tech-logo.png",
+    qualification: "B.ed, Maths Specialist",
+    avatar: "/sanu.jpg",
   },
   {
     id: 2,
-    quote: "We struggled a lot with X and Y! Not a problem anymore after switching",
-    subtitle: "Great customer support",
-    name: "Caroline Reaper",
-    title: "Co-Founder",
-    company: "Google",
-    avatar: "/young-tech-founder.png",
-    logo: "/placeholder-xsd8p.png",
+    name: "Saflie",
+    title: "Co-Founder & CTO",
+    qualification: "Msc Maths",
+    avatar: "/safle.jpg",
+ 
   },
   {
     id: 3,
-    quote: "Finally a great service that don't require constant maintenance",
-    subtitle: "Zero Maintenance",
-    name: "Jake Kang",
+    name: "Noufal",
     title: "Co-Founder & CTO",
-    company: "Amazon",
-    avatar: "/tech-executive-glasses.png",
-    logo: "/modern-software-logo.png",
+    qualification: "Msc, Maths Specialist",
+    avatar: "/noufal.jpg",
   },
   {
     id: 4,
-    quote: "The reliability is unmatched. We've had zero downtime since switching over.",
-    subtitle: "Enterprise-grade stability",
-    name: "Sarah Johnson",
-    title: "CTO",
-    company: "Vercel",
-    avatar: "/professional-woman-short-hair.png",
-    logo: "/enterprise-software-logo.png",
+    name: "Muflih",
+    title: "English Teacher",
+    qualification: "MA English",
+    avatar: "/muflih.jpg",
+  },
+   {
+    id: 5,
+    name: "Safuvana",
+    title: "Teacher",
+    qualification: "BA English",
+    avatar: "/crescent.png",
+  },
+   {
+    id: 6,
+    name: "Ayesha Hamnah",
+    title: "Teacher",
+    qualification: "Bsc botany",
+    avatar: "/crescent.png",
+  },
+     {
+    id: 7,
+    name: "Anas",
+    title: "Teacher",
+    qualification: "BA multimedia",
+    avatar: "/crescent.png",
+  },
+     {
+    id: 8,
+    name: "Mansoor",
+    title: "Principal",
+    qualification: " ",
+    avatar: "/crescent.png",
   },
 ]
 
@@ -51,42 +70,52 @@ export default function TestimonialCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   // Create a continuous array by duplicating testimonials
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials]
+  const duplicatedstaff = [...staff, ...staff, ...staff]
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-full overflow-hidden">
+      <div className="mb-8 text-center">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-orange-600">
+          Our <span className="text-blue-950">Team</span>
+          </h2>
+           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            The People We Build With
+          </p>
+          </div>
       {/* Gradient overlays */}
       {/* <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white/60 via-white/20 to-transparent pointer-events-none z-30" />
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white via-white/60 to-transparent pointer-events-none z-20" /> */}
 
       {/* Scrolling container */}
+       
       <div 
         ref={scrollRef}
-        className="flex gap-4"
+        className="flex gap-4 h-96"
         style={{
-          animation: 'scroll 20s linear infinite',
+          animation: 'scroll 17s linear infinite',
           width: 'fit-content'
         }}
       >
-        {duplicatedTestimonials.map((testimonial, index) => (
-          <div key={`${testimonial.id}-${index}`} style={{ flexShrink: 0 }}>
-            <TestimonialCard testimonial={testimonial} />
+        {duplicatedstaff.map((staff, index) => (
+          <div key={`${staff.id}-${index}`} style={{ flexShrink: 0 }}>
+            <StaffCard staff={staff} />
           </div>
         ))}
       </div>
 
       {/* Side gradients */}
-      <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-20" />
-      <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-20" />
+      <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-20" />
+      <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-20" />
 
       <style jsx>{`
         @keyframes scroll {
           0% {
-            transform: translateX(0);
+                    /* Move by exactly 1/3 of total width (4 cards × 380px + 4 gaps × 16px) */
+            transform: translateX(calc(-380px * 4 - 16px * 4));
+            
           }
           100% {
-            /* Move by exactly 1/3 of total width (4 cards × 380px + 4 gaps × 16px) */
-            transform: translateX(calc(-380px * 4 - 16px * 4));
+  transform: translateX(0);
           }
         }
       `}</style>
