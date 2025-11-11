@@ -82,6 +82,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+        {/* Static Favicon (Recommended) */}
+        <link rel="icon" href="/crescent.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/crescent.png" />
+
         {/* Font Preload */}
         <link
           rel="preload"
@@ -92,60 +96,7 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* Dynamic Favicon Script */}
-        {/* <Script id="dynamic-favicon" strategy="beforeInteractive">
-          {`
-            function updateFavicon() {
-              const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const faviconHref = ;
-              let link = document.querySelector("link[rel~='icon']");
-              if (!link) {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                document.getElementsByTagName('head')[0].appendChild(link);
-              }
-              link.href = faviconHref;
-            }
-            updateFavicon();
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
-          `}
-        </Script> */}
-        <Script id="dynamic-favicon" strategy="beforeInteractive">
-  {`
-    function updateFavicon() {
-      const faviconHref = '/crescent.png'; // ✅ relative path from public folder
-      let link = document.querySelector("link[rel~='icon']");
-      if (!link) {
-        link = document.createElement('link');
-        link.rel = 'icon';
-        document.getElementsByTagName('head')[0].appendChild(link);
-      }
-      link.href = faviconHref;
-    }
-    updateFavicon();
-  `}
-</Script>
-
-
-        {/* Google Tag Manager (deferred)*/}
-        {/* <Script id="gtm-script" strategy="lazyOnload">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-NFLHXXGK');`}
-        </Script> */}
-
-        {/* Google Analytics (deferred) */}
-        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-W6LV22900R" strategy="lazyOnload" />*/}
-       {/* <Script id="gtag-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-W6LV22900R');
-          `}
-        </Script> */} 
+        {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
@@ -168,16 +119,15 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to main content
         </a>
 
         <Suspense fallback={null}>
-          {/* <div className="fixed inset-0 z-0 bg-white dark:bg-black "> */}
-          <div className="fixed inset-0 z-0 bg-white ">
-            {/* <Plasma color="#172554 dark:#ea580c" speed={0.8} direction="forward" scale={1.5} opacity={0.7} mouseInteractive={true} /> */}
-                      <Plasma color="#ff8c2" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
+          <div className="fixed inset-0 z-0 bg-white">
+            <Plasma color="#ff8c2" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
           </div>
           <div className="relative z-10">{children}</div>
         </Suspense>
