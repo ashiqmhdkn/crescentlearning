@@ -15,11 +15,17 @@ export const metadata: Metadata = {
   description:
     "Crescent Learning - 38+ years of excellence in education. NMMS coaching, online courses, hybrid tuition, and student development programs. Join our Primary, Secondary, Senior Secondary, and Competitive Coaching divisions.",
   keywords: [
+    "Crescent Learning",
+    "Crescent Academy",
+    "quality education",
+    "coaching center",
+    "online courses",
+    "hybrid tuition",
+    "crescent",
     "education",
     "coaching",
     "NMMS",
-    "JEE",
-    "NEET",
+    "competitive exams",
     "school",
     "tuition",
     "academic excellence",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     description: "38+ years of excellence in education with comprehensive coaching programs",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://crescentlearning.org/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Crescent Learning - Quality Education",
@@ -102,27 +108,47 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Google Tag Manager (deferred) */}
-        <Script id="gtm-script" strategy="lazyOnload">
+        {/* Google Tag Manager (deferred)*/}
+        {/* <Script id="gtm-script" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-NFLHXXGK');`}
-        </Script>
+        </Script> */}
 
         {/* Google Analytics (deferred) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-W6LV22900R" strategy="lazyOnload" />
-        <Script id="gtag-init" strategy="lazyOnload">
+        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-W6LV22900R" strategy="lazyOnload" />*/}
+       {/* <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-W6LV22900R');
           `}
+        </Script> */} 
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MBJSN67T');
+          `}
         </Script>
+
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MBJSN67T"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to main content
@@ -132,14 +158,14 @@ export default function RootLayout({
           {/* <div className="fixed inset-0 z-0 bg-white dark:bg-black "> */}
           <div className="fixed inset-0 z-0 bg-white ">
             {/* <Plasma color="#172554 dark:#ea580c" speed={0.8} direction="forward" scale={1.5} opacity={0.7} mouseInteractive={true} /> */}
-                      <Plasma color="#ea580" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
+                      <Plasma color="#ff8c2" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
           </div>
           <div className="relative z-10">{children}</div>
         </Suspense>
 
         {/* Vercel Speed Insights and Analytics components */}
-        <SpeedInsights />
-        <Analytics />
+        {/* <SpeedInsights />
+        <Analytics /> */}
       </body>
     </html>
   )
