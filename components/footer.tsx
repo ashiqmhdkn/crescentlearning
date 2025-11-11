@@ -51,7 +51,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-gray-900/50 text-gray-400 hover:bg-blue-950 hover:text-black transition-all"
+                    className="p-2 rounded-lg bg-gray-900/50 text-gray-400 hover:bg-orange-600 hover:text-black transition-all"
                     aria-label={social.label}
                   >
                     <Icon className="h-5 w-5" />
@@ -67,7 +67,7 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-950 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-orange-600 transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -85,9 +85,9 @@ export function Footer() {
                   <li key={info.label}>
                     <a
                       href={info.href}
-                      className="flex items-start gap-3 text-gray-400 hover:text-blue-950 transition-colors text-sm group"
+                      className="flex items-start gap-3 text-gray-400 hover:text-orange-600 transition-colors text-sm group"
                     >
-                      <Icon className="h-5 w-5 mt-0.5 flex-shrink-0 group-hover:text-blue-950" />
+                      <Icon className="h-5 w-5 mt-0.5 flex-shrink-0 group-hover:text-orange-600" />
                       <div>
                         <p className="font-medium text-gray-300">{info.label}</p>
                         <p className="text-xs text-gray-500">{info.value}</p>
@@ -126,13 +126,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p>&copy; {currentYear} Crescent Learning. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#privacy" className="hover:text-blue-950 transition-colors">
+            <Link href="#privacy" className="hover:text-orange-600 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#terms" className="hover:text-blue-950 transition-colors">
+            <Link href="#terms" className="hover:text-orange-600 transition-colors">
               Terms of Service
             </Link>
-            <Link href="#contact" className="hover:text-blue-950 transition-colors">
+            <Link href="#contact" className="hover:text-orange-600 transition-colors">
               Contact
             </Link>
           </div>

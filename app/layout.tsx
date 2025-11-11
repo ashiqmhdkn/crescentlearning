@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://crescentlearning.org",
+    url: "/og-image.png",
     siteName: "Crescent Learning",
     title: "Crescent Learning | Quality Education & Coaching",
     description: "38+ years of excellence in education with comprehensive coaching programs",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Crescent Learning | Quality Education & Coaching",
     description: "38+ years of excellence in education with comprehensive coaching programs",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://crescentlearning.org",
@@ -83,7 +83,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
         {/* Static Favicon (Recommended) */}
-      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="any" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -130,7 +130,7 @@ export default function RootLayout({
 
         <Suspense fallback={null}>
           <div className="fixed inset-0 z-0 bg-white">
-            <Plasma color="#ff8c2" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
+            <Plasma color="#f82" speed={0.8} direction="forward" scale={1.5} opacity={0.5} mouseInteractive={true} />
           </div>
           <div className="relative z-10">{children}</div>
         </Suspense>
