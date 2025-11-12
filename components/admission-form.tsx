@@ -21,6 +21,7 @@ export function AdmissionForm() {
     "Grade 8",
     "Grade 9",
     "Grade 10",
+    "Others"
   ]
 
   const validateForm = () => {
@@ -72,7 +73,7 @@ export function AdmissionForm() {
           <p className="text-gray-600 text-lg">Fill out the form below to apply for admission</p>
         </div>
 
-        <div className="glass-card-enhanced p-8 rounded-2xl">
+        <div className=" liquid-glass  bg-white/77 p-8 rounded-2xl">
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-12">
               <CheckCircle className="h-16 w-16 text-orange-600 mb-4" />
@@ -85,7 +86,7 @@ export function AdmissionForm() {
             <form onSubmit={handleSubmit} className="space-y-4 ">
               <div>
                  <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2"> Name *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2"> Name *</label>
                 <input
                   type="text"
                   name="parentName"
@@ -105,7 +106,7 @@ export function AdmissionForm() {
               </div>
               <div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">School *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">School *</label>
                 <input
                   type="text"
                   name="parentName"
@@ -124,7 +125,7 @@ export function AdmissionForm() {
               </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Parent's Name *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Parent's Name *</label>
                 <input
                   type="text"
                   name="parentName"
@@ -143,7 +144,7 @@ export function AdmissionForm() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Place *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Place *</label>
                 <input
                   type="text"
                   name="parentName"
@@ -162,7 +163,7 @@ export function AdmissionForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Phone *</label>
                 <input
                   type="number"
 
@@ -181,7 +182,7 @@ export function AdmissionForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Student's Grade *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Student's Grade *</label>
                 <select
                   name="studentGrade"
                   value={formData.studentGrade}
@@ -190,7 +191,7 @@ export function AdmissionForm() {
                              text-gray-800 focus:outline-none focus:ring-2
                              ${errors.studentGrade ? "border-red-500 focus:ring-red-500" : "border-orange-200 focus:ring-orange-500"}`}
                 >
-                  <option value="">Select student grade</option>
+                  <option   value="">Select student grade</option>
                   {grades.map((grade) => (
                     <option key={grade} value={grade}>
                       {grade}
