@@ -38,9 +38,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-4">Crescent Learning</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Providing quality education and coaching for over 38 years. Nurturing excellence in every student.
+            <h3 className="text-xl font-bold text-white mb-4 hover:text-orange-600">Crescent Learning</h3>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 hover:text-orange-600">
+              A LEGACY OF SUCCESS FOR GENERATIONS
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => {
@@ -63,7 +63,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-4 hover:text-orange-600">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -77,7 +77,7 @@ export function Footer() {
 
           {/* Contact Information */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-white mb-4 hover:text-orange-600">Contact Us</h4>
             <ul className="space-y-3">
               {contactInfo.map((info) => {
                 const Icon = info.icon
@@ -89,8 +89,8 @@ export function Footer() {
                     >
                       <Icon className="h-5 w-5 mt-0.5 flex-shrink-0 group-hover:text-orange-600" />
                       <div>
-                        <p className="font-medium text-gray-300">{info.label}</p>
-                        <p className="text-xs text-gray-500">{info.value}</p>
+                        <p className="font-medium text-gray-300 hover:text-orange-600">{info.label}</p>
+                        <p className="text-xs text-gray-500 hover:text-orange-600">{info.value}</p>
                       </div>
                     </a>
                   </li>
@@ -123,7 +123,7 @@ export function Footer() {
         <div className="border-t border-gray-800 my-8" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400 hover:text-orange-600">
           <p>&copy; {currentYear} Crescent Learning. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#privacy" className="hover:text-orange-600 transition-colors">

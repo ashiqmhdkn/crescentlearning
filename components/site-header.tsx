@@ -41,10 +41,10 @@ export function SiteHeader() {
   ]
 
   const links = [
-    { href: "#program", label: "Programs", icon: ScrollText },
+    { href: "#divisions", label: "Programs", icon: ScrollText },
     { href: "#gallery", label: "Gallery", icon: Images },
-    { href: "#test", label: "Testimonials", icon: MessageSquareText},
-    { href: "#About", label: "About", icon: Info },
+    { href: "#collaborators", label: "Testimonials", icon: MessageSquareText},
+    { href: "#about", label: "About", icon: Info },
   ]
 
   return (
@@ -115,9 +115,9 @@ export function SiteHeader() {
           <div className="hidden md:flex">
             <Button
               asChild
-              className="bg-blue-950 text-black font-medium rounded-lg px-6 py-2.5
-                         hover:bg-blue-600 hover:shadow-md hover:scale-[1.02]
-                         transition-all text-white/70"
+              className="bg-orange-600 text-black font-medium rounded-lg px-6 py-2.5
+                         hover:bg-orange-800 hover:shadow-md hover:scale-[1.02]
+                         transition-all text-gray-600"
             >
               <Link href="https://wa.me/9745686235 ">Chat With Us</Link>
             </Button>
@@ -198,8 +198,8 @@ export function SiteHeader() {
                 <div className="mt-auto border-t border-gray-800 p-4">
                   <Button
                     asChild
-                    className="w-full bg-blue-950 text-white font-medium rounded-lg px-6 py-2.5
-                               hover:bg-blue-600 hover:shadow-md hover:scale-[1.02]
+                    className="w-full bg-orange-600 text-white font-medium rounded-lg px-6 py-2.5
+                               hover:bg-orange-800 hover:shadow-md hover:scale-[1.02]
                                transition-all"
                   >
                     <Link href="https://wa.me/9745686235">Chat With Us</Link>

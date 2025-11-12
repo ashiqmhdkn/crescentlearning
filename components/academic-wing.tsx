@@ -1,5 +1,5 @@
 import { BookOpen, Laptop, Users, Award } from "lucide-react"
-import TestimonialCarousel from "./testmonials"
+import TestimonialCarousel from "./staff-scroll"
 
 export function AcademicWing() {
   const divisions = [
@@ -75,24 +75,24 @@ export function AcademicWing() {
 
   return (
     // <section className="relative py-16 sm:py-24 bg-neutral-900">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl text-blue-950 sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            Academic <span className="text-orange-600">Divisions</span>
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Comprehensive educational programs designed for every learning preference
-          </p>
-        </div>
+    <div className="container mx-auto px-4 max-w-6xl" id="divisions">
+      <div className="mb-12 text-center">
+        <h2 className="text-3xl text-blue-950 sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Academic <span className="text-orange-600">Divisions</span>
+        </h2>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Comprehensive educational programs designed for every learning preference
+        </p>
+      </div>
 
-        {/* Divisions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {divisions.map((division) => {
-            const Icon = division.icon
-            return (
-              <div className="relative rounded-[28px] glass-border bg-neutral-900 p-2">
-      <div className=" w-full overflow-hidden rounded-2xl">
-        {/* <LazyVideo
+      {/* Divisions Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {divisions.map((division) => {
+          const Icon = division.icon
+          return (
+            <div className="relative rounded-xl glass-border bg-neutral-900 p-2">
+              <div className=" w-full overflow-hidden rounded-2xl">
+                {/* <LazyVideo
           src={
             videoSrc ??
             "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b0f3222371106db366a14ca1c29cef55-1b1EWVSa4w3FL2zslcaCGYTy9vcxjF.mp4"
@@ -105,55 +105,55 @@ export function AcademicWing() {
           aria-label={`${title} - ${sub}`}
         /> */}
 
-        <div className="relative z-10 p-3">
-          <div className="mx-auto mb-3 h-1.5 w-16 rounded-full" />
-          <div className="space-y-1 px-1">
-            <div className="text-3xl font-bold leading-snug text-orange-600/90">{division.description}</div>
-            <p className="text-xl text-white/40">{division.name}</p>
-            <div className="mt-3 inline-flex items-center rounded-full px-2 py-0.5 text-xs uppercase tracking-wider text-white/70">
-              {division.details}
-            </div>
-            <div className="flex flex-wrap gap-2 my-4">
-                    {division.features.map((feature, i) => (
-                      <span
-                        key={i}
-                        className={`inline-flex items-center rounded-full ${division.bgAccent} px-3 py-1 text-xs font-medium ${division.accentColor} border ${division.borderColor}`}
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-            {division.stats && (
-                    <div className="glass-card bg-transparent grid grid-cols-2 gap-4 mb-6 p-4 rounded-lg">
-                      {division.stats.map((stat, i) => (
-                        <div key={i} className="text-center">
-                          <div className="text-2xl font-bold text-orange-600">{stat.value}</div>
-                          <div className="text-xs text-gray-700 font-medium">{stat.label}</div>
-                        </div>
-                        
+                <div className="relative z-10 p-3">
+                  <div className="mx-auto mb-3 h-1.5 w-16 rounded-full" />
+                  <div className="space-y-1 px-1">
+                    <div className="text-3xl font-bold leading-snug text-orange-600/90">{division.description}</div>
+                    <p className="text-xl text-white/40">{division.name}</p>
+                    <div className="mt-3 inline-flex items-center rounded-full px-2 py-0.5 text-xs uppercase tracking-wider text-white/70">
+                      {division.details}
+                    </div>
+                    <div className="flex flex-wrap gap-2 my-4">
+                      {division.features.map((feature, i) => (
+                        <span
+                          key={i}
+                          className={`inline-flex items-center rounded-full ${division.bgAccent} px-3 py-1 text-xs font-medium ${division.accentColor} border ${division.borderColor}`}
+                        >
+                          {feature}
+                        </span>
                       ))}
                     </div>
-                  )}
-                   
-{/* 
+                    {division.stats && (
+                      <div className="glass-card bg-transparent grid grid-cols-2 gap-4 mb-6 p-4 rounded-lg">
+                        {division.stats.map((stat, i) => (
+                          <div key={i} className="text-center">
+                            <div className="text-2xl font-bold text-orange-600">{stat.value}</div>
+                            <div className="text-xs text-gray-700 font-medium">{stat.label}</div>
+                          </div>
+
+                        ))}
+                      </div>
+                    )}
+
+                    {/* 
                   <Button
                     asChild
                     className={`w-full ${division.accentColor} bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-lg hover:shadow-lg hover:scale-[1.02] transition-all`}
                   >
                     <a href="#contact">Learn More</a>
                   </Button> */}
-          </div>
-        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </div>
-    </div>
-            )
-          })}
-        </div>
-        {/* <TestimonialCarousel/> */}
+      {/* <TestimonialCarousel/> */}
 
-        {/* CTA Section */}
-        
-      </div>
+      {/* CTA Section */}
+
+    </div>
     // </section>
   )
 }

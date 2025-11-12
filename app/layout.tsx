@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/og-image.png",
+    url: "https://crescentlearning.org",
     siteName: "Crescent Learning",
     title: "Crescent Learning | Quality Education & Coaching",
     description: "38+ years of excellence in education with comprehensive coaching programs",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Crescent Learning | Quality Education & Coaching",
     description: "38+ years of excellence in education with comprehensive coaching programs",
-    images: ["/og-image.png"],
+    images: ["https://crescentlearing.org/og-image.png"],
   },
   alternates: {
     canonical: "https://crescentlearning.org",
@@ -83,11 +83,27 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
         {/* Static Favicon (Recommended) */}
-      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="any" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="shortcut icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+    // Replace your current favicon section with this complete implementation
+{/* <link rel="icon" href="/crescent.png" type="image/png" />
+{/* Primary Favicon - Multiple formats for compatibility */}
+{/* <link rel="icon" href="/favicon.ico" sizes="32x32" /> */}
+{/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
+{/* <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" /> */}
+{/* <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" /> */}
+{/* <link rel="icon" href="/favicon-512x512.png" type="image/png" sizes="512x512" /> */}
+
+{/* Apple Touch Icons */}
+{/* <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" /> */}
+
+{/* Web App Manifest */}
+{/* <link rel="manifest" href="/site.webmanifest" /> */}
+
+{/* Microsoft Tile */}
+{/* <meta name="msapplication-TileColor" content="#000000" /> */}
+{/* <meta name="msapplication-config" content="/browserconfig.xml" /> */} 
+<link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
 
         {/* Font Preload */}
         <link

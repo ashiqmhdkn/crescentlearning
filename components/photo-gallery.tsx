@@ -61,7 +61,7 @@ export function PhotoGallery() {
   const categories = ["All", ...new Set(galleryImages.map((img) => img.category))]
 
   return (
-    <section className="relative py-16 sm:py-24 ">
+    <section className="relative py-16 sm:py-24 "id="gallery">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-blue-950">

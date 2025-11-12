@@ -13,7 +13,7 @@ export function Hero() {
   )
 
   return (
-    <section className="relative isolate h-full overflow-hidden">
+    <section className="relative isolate h-screen overflow-hidden"id="home">
       <div className="container mx-auto px-4 py-16 ">
         <div className="flex flex-col items-center justify-center py-14 sm:py-20">
           <div className="mb-5 flex items-center gap-2">

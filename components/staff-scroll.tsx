@@ -66,14 +66,14 @@ const staff = [
   },
 ]
 
-export default function TestimonialCarousel() {
+export default function StaffScroll() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   // Create a continuous array by duplicating testimonials
   const duplicatedstaff = [...staff, ...staff, ...staff]
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden" id="team">
       <div className="mb-8 text-center">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-orange-600">
           Our <span className="text-blue-950">Team</span>

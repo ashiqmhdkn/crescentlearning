@@ -17,7 +17,7 @@ export function About() {
   ]
 
   return (
-    <section className="relative py-16 sm:py-24">
+    <section className="relative py-16 sm:py-24" id="about">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-xl text-orange-600 sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">

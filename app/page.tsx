@@ -7,7 +7,8 @@ import { Collaborators } from "@/components/collaborators"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { AdmissionForm } from "@/components/admission-form"
 import Script from "next/script"
-import TestimonialCarousel from "@/components/testmonials"
+import TestimonialCarousel from "@/components/staff-scroll"
+import StaffScroll from "@/components/staff-scroll"
 
 export const dynamic = "force-static"
 
@@ -89,7 +90,7 @@ export default function Page() {
         <Hero />
         <About />
         <AcademicWing />
-        <TestimonialCarousel/>
+        <StaffScroll/>
         <Collaborators />
         <PhotoGallery />
         <AdmissionForm />
